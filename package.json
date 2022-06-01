@@ -14,9 +14,11 @@
     "build": "tsc -p tsconfig.release.json",
     "serve": "node build/src/main.js",
     "start": "tsc-watch -p tsconfig.release.json --onSuccess \"node ./build/src/main.js\"",
+    "postinstall": "npm run tsc",
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "tsc": "tsc"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
